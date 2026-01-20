@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Golden Care Agencies — Global Job Opportunities for Kenyan Youth</title>
+
+<!-- ✅ BOXICONS CDN -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<style>
+:root {
+  --primary:#0d3b66;
+  --secondary:#f4d35e;
+  --light:#fefcfb;
+  --dark:#1d1d1d;
+  --whatsapp:#25D366;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:linear-gradient(180deg,#f8fafc,#eef2f7);
+  color:#1d1d1d;
+}
+
+/* NAV */
+nav {
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:1.2rem;
+  background:rgba(13,59,102,.92);
+  color:#fff;
+  text-align:center;
+  font-weight:700;
+  z-index:1000;
+}
+
+/* HERO */
+.hero {
+  padding:9rem 2rem 5rem;
+  text-align:center;
+}
+.hero h1 { color:var(--primary); }
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  margin-top:.8rem;
+  padding:.8rem 1.6rem;
+  background:linear-gradient(135deg,var(--secondary),#ffd966);
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:999px;
+}
+
+/* SECTIONS */
+.section {
+  padding:4rem 2rem;
+  max-width:1100px;
+  margin:auto;
+}
+.gallery,.services {
+  background:#fff;
+  border-radius:18px;
+  padding:2.5rem;
+  margin-top:2rem;
+}
+
+/* GALLERY */
+.gallery-grid {
+  display:grid;
+  gap:1.2rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.image-card { text-align:center; }
+.image-card img {
+  width:90%;
+  border-radius:14px;
+}
+
+/* FEATURES */
+.features {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.4rem;
+}
+
+/* FOOTER */
+footer {
+  background:linear-gradient(135deg,var(--primary),#0b2f55);
+  color:#fff;
+  text-align:center;
+  padding:2rem;
+  margin-top:3rem;
+}
+
+/* MODAL */
+.modal {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+.modal-content {
+  background:#fff;
+  padding:2rem;
+  width:95%;
+  max-width:520px;
+  border-radius:16px;
+  position:relative;
+}
+.modal-close {
+  position:absolute;
+  top:12px;
+  right:16px;
+  font-size:1.5rem;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* FORM */
+form input, form select {
+  width:100%;
+  padding:.8rem;
+  margin-bottom:.8rem;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+form button {
+  width:100%;
+  padding:.9rem;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ✅ FLOATING WHATSAPP ICON */
+.whatsapp-float {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:var(--whatsapp);
+  color:white;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  text-decoration:none;
+  box-shadow:0 8px 25px rgba(37,211,102,0.6);
+  z-index:3000;
+}
+
+.whatsapp-float:hover {
+  transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<nav><h1>Golden Care Agencies — Global Job Opportunities for Kenyan Youth</h1></nav>
+
+<section class="hero">
+  <h1>Empowering Kenyan Youth with Global Job Opportunities</h1>
+  <p>Connecting skilled candidates to reliable employers worldwide.</p>
+</section>
+
+<section class="section gallery">
+  <h2>Our Work Internationally</h2>
+
+  <div class="gallery-grid">
+    <div class="image-card">
+      <img src="global.png">
+      <a class="btn apply-btn">Apply Now</a>
+    </div>
+    <div class="image-card">
+      <img src="male.png">
+      <a class="btn apply-btn">Apply Now</a>
+    </div>
+    <div class="image-card">
+      <img src="apply.png">
+      <a class="btn apply-btn">Apply Now</a>
+    </div>
+    <div class="image-card">
+      <img src="barista.png">
+      <a class="btn apply-btn">Apply Now</a>
+    </div>
+    <div class="image-card">
+      <img src="ware.png">
+      <a class="btn apply-btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="section services">
+  <h2>Available Job Sectors</h2>
+  <div class="features">
+    <div>🛎️ Hospitality</div>
+    <div>❤️ Caregiving</div>
+    <div>🛡️ Security</div>
+    <div>🧹 Cleaning</div>
+    <div>💼 Customer Service</div>
+  </div>
+</section>
+
+<footer>
+© 2026 Golden Care Agencies — Connecting Kenyan Youth to Global Opportunities
+</footer>
+
+<!-- POPUP FORM -->
+<div class="modal" id="applyModal">
+  <div class="modal-content">
+    <span class="modal-close" id="closeModal">&times;</span>
+
+    <h2>Apply Now</h2>
+    <form id="whatsappForm">
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <select id="sector" required>
+        <option value="">Select Job Sector</option>
+        <option>Hospitality</option>
+        <option>Caregiving</option>
+        <option>Security</option>
+        <option>Cleaning</option>
+        <option>Customer Service</option>
+      </select>
+
+      <input type="file" disabled>
+      <small style="color:#666;">CV will be requested on WhatsApp</small>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<!-- ✅ FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/254792891882" class="whatsapp-float" target="_blank">
+  <i class='bx bxl-whatsapp'></i>
+</a>
+
+<script>
+const modal = document.getElementById("applyModal");
+const buttons = document.querySelectorAll(".apply-btn");
+const closeBtn = document.getElementById("closeModal");
+
+buttons.forEach(btn => {
+  btn.onclick = () => modal.style.display = "flex";
+});
+
+closeBtn.onclick = () => modal.style.display = "none";
+
+window.onclick = e => {
+  if (e.target === modal) modal.style.display = "none";
+};
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = fullname.value;
+  const email = email.value;
+  const phone = phone.value;
+  const sector = sector.value;
+
+  const message =
+`Hello Golden Care Agencies,
+
+I would like to apply for a job opportunity.
+
+👤 Name: ${name}
+📧 Email: ${email}
+📞 Phone: ${phone}
+💼 Job Sector: ${sector}
+
+Thank you.`;
+
+  const url = "https://wa.me/254792891882?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+  modal.style.display = "none";
+});
+</script>
+
+</body>
+</html>
